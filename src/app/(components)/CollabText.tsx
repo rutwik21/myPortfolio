@@ -39,7 +39,6 @@ function CollabText() {
                 start: 'top 60%',
                 end: '50% 50%',
                 scrub: 1,
-                markers: true,
                 
             }
         }); 
