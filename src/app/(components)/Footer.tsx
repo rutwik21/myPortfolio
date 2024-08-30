@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 function Footer() {
@@ -5,7 +6,14 @@ function Footer() {
     <div className='w-[100%]  bg-black text-white text-center p-3'>
         <div className="flex">
             <div >
-                <img className='rounded-3xl mx-10 my-4 min-w-96 max-w-96' src="/profile.png" alt='profile' /> 
+                <img className='rounded-3xl mx-10 my-4 min-w-96 max-w-96' src="/profile.png" alt='profile' />
+            {/* <Image
+                className='rounded-3xl mx-10 my-4'
+                src="/profile.png"
+                // fill={true}
+                width={450}
+                height={150}
+                alt='profile' /> */}
 
             </div>
 
@@ -14,9 +22,9 @@ function Footer() {
                     LETS <br /> CONNECT
                 </h1>
                 <div className="flex">
-                    <a target="_blank" href='https://in.linkedin.com/in/rut-wik ' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Linkedin</a>
-                    <a target="_blank" href='https://github.com/rutwik21' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Github</a>
-                    <a target="_blank" href='https://www.instagram.com/rut_wik' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Instagram</a>
+                    <a className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Linkedin</a>
+                    <a className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Github</a>
+                    <a className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Instagram</a>
                 </div>
                 <div className="flex gap-3">
                     <p className='text-gray-400 text-thin'>Email:  <a href='mailto:rutwikkashid000@gmail.com'>rutwikkashid000@gmail.com</a></p>

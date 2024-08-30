@@ -20,7 +20,6 @@ function CollabText() {
                 start: '0% 50%',
                 end: '100% 50%',
                 scrub: 1,
-                // markers: true
             }
         });
 

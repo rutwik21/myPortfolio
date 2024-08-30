@@ -1,3 +1,4 @@
+'use client'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
 import React, { useRef } from 'react'
@@ -15,27 +16,24 @@ function Header() {
                 start: 'top bottom',
                 end: 'top center',
                 scrub: 0.3,
-                // markers: true
             }
         });
 
         tl.from(softwareE.current,{
-            // position:'absolute',
             y: '66vh',
-            // x:'-12vw',
-            // y: '71.5vh',
-            // x:'97svw',
-            // x:'-15.5svw',
-            // scale:1.8,
+            // y:()=>{
+            //     const y = ((66/100) * window.innerHeight)
+            //     console.log((window.innerHeight - 735))
+            //     return y;
+            // },
             scale:8,
-            // yPercent: -150,
             ease: 'none',
             duration: 3,
             delay: 0.3
         })
     })
   return (
-    <main className='bg-white fixed z-50 top-0 inset-x-0 h-16 p-16 border-b text-center flex justify-between'>
+    <main className='bg-white fixed z-10 top-0 inset-x-0 h-16 p-16 border-b text-center flex justify-between'>
         <a  className='text-xl font-semibold mt-[-8px]'>{ "{ Full Stack Developer }" }</a>
         <a ref={softwareE} className='text-xl font-semibold mt-[-8px] relative left-[-90px]'>RUTWIK KASHID</a>
         <div className=' cursor-pointer mt-[-25px]'>

@@ -1,8 +1,11 @@
+
 import type { Metadata } from "next";
 import { Space_Grotesk as FontSans } from "next/font/google"
 import "./globals.css";
 
+
 import { cn } from "@/lib/utils"
+import { useRef } from "react";
  
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,11 +22,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+    
   return (
     <html lang="en">
-      <body  className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+      <body className={cn(
+          "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontSans.variable
         )}>
           {children}

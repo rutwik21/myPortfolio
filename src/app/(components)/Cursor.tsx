@@ -39,8 +39,10 @@ function Cursor() {
     })
     
   return (
-    <div className='cursor' id='cursor'>
-        <span className='cursor-text'>View</span>
+    <div className=' hidden lg:block'>
+        <div className='cursor' id='cursor'>
+            <span className='cursor-text'>View</span>
+        </div>
     </div>
   )
 }
