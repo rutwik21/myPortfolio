@@ -12,19 +12,19 @@ function Intro() {
     useGSAP(()=>{
         const tl = gsap.timeline();
         
+        // tl.to(name.current, {
+        //     duration: 1.5,
+        //     text: "Bonjour",
+        //     ease: "power3.out",
+        //   });
         tl.to(name.current, {
             duration: 1.5,
-            text: "Bonjour",
+            text: "Ciao",
             ease: "power3.out",
           });
         tl.to(name.current, {
             duration: 1.5,
             text: "Hola",
-            ease: "power3.out",
-          });
-        tl.to(name.current, {
-            duration: 1.5,
-            text: "Ciao",
             ease: "power3.out",
           });
         tl.to(name.current, {

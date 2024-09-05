@@ -64,7 +64,7 @@ function CollabText() {
     })
   return (
     <div className='h-svh '>
-        <div ref={upScroll} className='w-[100%] border-0 h-[100px] overflow-hidden bg-transparent mt-[-100px] relative'>
+        <div ref={upScroll} className='w-[100%] border-0 h-[100px] overflow-hidden bg-white mt-[-100px] relative'>
             <div ref={innerUpScroll} className='absolute left-[50%] w-[150%] h-[750%] bg-black rounded-[50%] translate-x-[-50%]'>
                 
             </div>

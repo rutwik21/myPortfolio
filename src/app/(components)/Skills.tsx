@@ -3,7 +3,7 @@ import React from 'react'
 function Skills() {
     
   return (
-    <div className='min-h-svh mb-20'>
+    <div className='min-h-svh mb-20 bg-white'>
         <div className='text-gray-500 text-3xl text-center pt-32'>
             SKILLS & SERVICES
         </div>

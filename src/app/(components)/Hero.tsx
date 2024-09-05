@@ -18,8 +18,7 @@ function Hero() {
     
      
   return (
-    <MaxWidthRapper >
-        <main ref={pinDiv} className='w-full h-svh flex items-center justify-center mb-36'>
+        <main ref={pinDiv} className='w-full h-svh flex items-center justify-center mb-[94px] bg-white '>
             <div className='text-center'>
                     {/* <h1 className='text-5xl mt-48 md:text-9xl view select-none'> Rutwik Kashid </h1> */}
                     <p className='text-xl md:text-3xl text-center mt-6 select-none'>I'm a creative <span className='font-semibold'>Full stack developer</span>  who loves to build websites.</p>
@@ -35,7 +34,6 @@ function Hero() {
                 </div>
             </div>
         </main>
-    </MaxWidthRapper>
   )
 }
 

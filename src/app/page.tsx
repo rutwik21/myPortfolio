@@ -19,12 +19,12 @@ export default function Home() {
   useGSAP(()=>{
     gsap.from(container2.current,{
       opacity: 0,
-      delay: 7.2,
+      delay: 6.5,
       duration: 2
     });
     gsap.from(container1.current,{
       overflow: 'hidden',
-      delay: 7.6,
+      delay: 6,
     });
   })
     
@@ -51,13 +51,14 @@ export default function Home() {
       <div ref={container} >
         <Intro />
       </div>
-      <div ref={container2}>
+      <div ref={container2} id="fullContent">
         <Cursor />
         <Header />
         <Hero />
         <CollabText />
         <Skills />
         <Footer />
+        
       </div>
     </main>
   );
