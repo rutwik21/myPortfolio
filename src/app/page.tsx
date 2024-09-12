@@ -10,6 +10,7 @@ import Footer from "./(components)/Footer";
 import Intro from "./(components)/Intro";
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import Projects from "./(components)/Projects";
 
 export default function Home() {
 
@@ -19,12 +20,12 @@ export default function Home() {
   useGSAP(()=>{
     gsap.from(container2.current,{
       opacity: 0,
-      delay: 6.5,
+      delay: 3.5,
       duration: 2
     });
     gsap.from(container1.current,{
       overflow: 'hidden',
-      delay: 6,
+      delay: 3,
     });
   })
     
@@ -57,6 +58,7 @@ export default function Home() {
         <Hero />
         <CollabText />
         <Skills />
+        <Projects />
         <Footer />
         
       </div>

@@ -8,6 +8,7 @@ function Cursor() {
         const cursor = document.getElementById('cursor');
         const cursorText = document.querySelector('.cursor-text');
         const links = document.querySelectorAll('a');
+        const imgs = document.querySelectorAll('img');
 
         const onMouseMove = (e:MouseEvent) => {
             gsap.to(cursor,{x: e.clientX, y: e.clientY});
@@ -30,11 +31,25 @@ function Cursor() {
                 //@ts-ignore
                 cursorText.style.display = 'none';
         };
+        const onMouseEnterImg = (e:MouseEvent) => {
+            const link = e.target;
+            // @ts-ignore
+            gsap.to(cursor,{display:'none'});
+            
+        };
+        
+        const onMouseLeaveImg = () => {
+                gsap.to(cursor,{display:'block'});
+        };
 
         document.addEventListener('mousemove', onMouseMove);
         links.forEach(link =>{
             link.addEventListener('mouseenter', onMouseEnterLink);
             link.addEventListener('mouseleave', onMouseLeaveLink);
+        });
+        imgs.forEach(img =>{
+            img.addEventListener('mouseenter', onMouseEnterImg);
+            img.addEventListener('mouseleave', onMouseLeaveImg);
         })
     })
     

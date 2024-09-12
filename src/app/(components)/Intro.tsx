@@ -17,16 +17,16 @@ function Intro() {
         //     text: "Bonjour",
         //     ease: "power3.out",
         //   });
-        tl.to(name.current, {
-            duration: 1.5,
-            text: "Ciao",
-            ease: "power3.out",
-          });
-        tl.to(name.current, {
-            duration: 1.5,
-            text: "Hola",
-            ease: "power3.out",
-          });
+        // tl.to(name.current, {
+        //     duration: 1.5,
+        //     text: "Ciao",
+        //     ease: "power3.out",
+        //   });
+        // tl.to(name.current, {
+        //     duration: 1.5,
+        //     text: "Hola",
+        //     ease: "power3.out",
+        //   });
         tl.to(name.current, {
             duration: 1.5,
             text: "नमस्ते",

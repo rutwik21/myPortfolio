@@ -1,42 +1,31 @@
 'use client'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger)
 
 function Footer() {
 
-    const footer = useRef(null);
-    useGSAP(()=>{
-        gsap.to(footer.current,{
-            scrollTrigger: {
-                trigger: footer.current,
-                start: 'top bottom',
-                end: 'top 0',
-                markers: true
-            },
-            zIndex: -1,
-            position: 'fixed',
-            bottom: 0
-        })
-    })
+    // const footer = useRef(null);
+    // useGSAP(()=>{
+    //     gsap.to(footer.current,{
+    //         scrollTrigger: {
+    //             trigger: footer.current,
+    //             start: 'top bottom',
+    //             end: 'top 0',
+    //         },
+    //         zIndex: -1,
+    //         position: 'fixed',
+    //         bottom: 0
+    //     })
+    // })
   return (
     <div>
-    {/* <div className="h-[50vh]"></div> */}
         <div className='w-[100%] bg-black text-white text-center p-3 '>
             <div className="flex">
                 <div >
                     <img className='rounded-3xl mx-10 my-4 min-w-96 max-w-96' src="/profile.png" alt='profile' />
-                {/* <Image
-                    className='rounded-3xl mx-10 my-4'
-                    src="/profile.png"
-                    // fill={true}
-                    width={450}
-                    height={150}
-                    alt='profile' /> */}
-
                 </div>
 
                 <div className='my-4'>
@@ -44,9 +33,9 @@ function Footer() {
                         LETS <br /> CONNECT
                     </h1>
                     <div className="flex">
-                        <a href='#' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Linkedin</a>
-                        <a href='#' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Github</a>
-                        <a href='#' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Instagram</a>
+                        <a href='https://www.linkedin.com/in/rut-wik' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Linkedin</a>
+                        <a href='https://github.com/rutwik21' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Github</a>
+                        <a href='https://www.instagram.com/rut_wik' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Instagram</a>
                     </div>
                     <div className="flex gap-3">
                         <p className='text-gray-400 text-thin'>Email:  <a href='mailto:rutwikkashid000@gmail.com'>rutwikkashid000@gmail.com</a></p>
@@ -67,9 +56,6 @@ function Footer() {
 
         </div>
         
-
-    
-
     </div>
   )
 }
