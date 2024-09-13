@@ -11,6 +11,7 @@ import Intro from "./(components)/Intro";
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Projects from "./(components)/Projects";
+import About from "./(components)/About";
 
 export default function Home() {
 
@@ -31,7 +32,7 @@ export default function Home() {
     
     
   useEffect(() =>{
-    window.scrollTo(0, 0)
+    global?.window?.scrollTo(0, 0)
     const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
@@ -62,6 +63,9 @@ export default function Home() {
         </div>
         <div id="projects">
           <Projects />
+        </div>
+        <div id="about">
+          <About />
         </div>
         <div id="contact">
           <Footer />

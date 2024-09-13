@@ -45,9 +45,9 @@ function Header() {
         let mm = gsap.matchMedia();
         mm.add("(max-width: 768px)",()=>{
             tl.from(softwareE.current,{
-                y: '73vh',
+                y: '65vh',
                 x:'40',
-                scale:4,
+                scale:3,
                 ease: 'none',
                 duration: 3,
                 delay: 0.3
@@ -93,7 +93,7 @@ function Header() {
         </div>
         <div className='bg-white fixed z-10 top-0 inset-x-0 h-16 w-svw p-16 border-b text-center flex justify-between'>
             <a  className='hidden md:block md:text-xl font-semibold absolute top-16 left-11 '>{ "{ Full Stack Developer }" }</a>
-            <a  className='block md:hidden md:text-xl font-semibold absolute top-16 left-11 w-20'>Full Stack Developer</a>
+            {/* <a  className='block md:hidden md:text-xl font-semibold absolute top-16 left-11 w-20'>Full Stack Developer</a> */}
             <div>
             <a ref={softwareE} className=' text-xl font-semibold absolute left-[-15px] top-16 w-full text-center'>RUTWIK KASHID</a>
 

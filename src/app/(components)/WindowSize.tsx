@@ -28,10 +28,12 @@ function getWindowSize() {
     //   // Remove event listener on cleanup
     //   return () => window.removeEventListener("resize", handleResize);
     // }, []); // Empty array ensures that effect is only run on mount
+    
     return {
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: global?.window?.innerWidth || 0,
+      height: global?.window?.innerHeight || 0,
     };
 };
 
 export default getWindowSize;
+

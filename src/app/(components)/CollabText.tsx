@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, { useRef } from 'react'
+import getWindowSize from './WindowSize'
 gsap.registerPlugin(ScrollTrigger)
 
 function CollabText() {
@@ -16,7 +17,7 @@ function CollabText() {
     const text5 = useRef(null);
     const text6 = useRef(null);
     const text7 = useRef(null);
-    if(window.innerWidth >= 768){
+    if(getWindowSize().width >= 768){
         useGSAP(()=>{
             const tl = gsap.timeline({
                 scrollTrigger: {
