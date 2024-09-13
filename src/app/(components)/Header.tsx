@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import React, { useRef, useState } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link';
+import getWindowSize from './WindowSize';
 gsap.registerPlugin(ScrollTrigger)
 
 function Header() {
@@ -41,17 +42,25 @@ function Header() {
             }
         });
 
-        tl.from(softwareE.current,{
-            y: '73vh',
-            // y:()=>{
-            //     const y = ((66/100) * window.innerHeight)
-            //     console.log((window.innerHeight - 735))
-            //     return y;
-            // },
-            scale:8,
-            ease: 'none',
-            duration: 3,
-            delay: 0.3
+        let mm = gsap.matchMedia();
+        mm.add("(max-width: 768px)",()=>{
+            tl.from(softwareE.current,{
+                y: '73vh',
+                x:'40',
+                scale:4,
+                ease: 'none',
+                duration: 3,
+                delay: 0.3
+            })
+        })
+        mm.add("(min-width: 769px)",()=>{
+            tl.from(softwareE.current,{
+                y: '73vh',
+                scale:8,
+                ease: 'none',
+                duration: 3,
+                delay: 0.3
+            })
         })
     })
   return (
@@ -73,19 +82,20 @@ function Header() {
 
             <div ref={menuElements} className=' absolute top-40 right-10 space-y-8 text-gray-500 text-4xl md:text-7xl text-right'>
 
-                <h4 className=" hover:underline hover:text-white"><Link href='#about'>ABOUT</Link></h4>
-                <h4 className=" hover:underline hover:text-white"><Link href='#skills'>SKILLS</Link></h4>
-                <h4 className=" hover:underline hover:text-white"><Link href='#projects'>PROJECTS</Link></h4>
-                <h4 className=" hover:underline hover:text-white"><Link href='#contact'>CONTACT</Link></h4>
+                <h4 onClick={()=>{return showMenu()}} className=" hover:underline hover:text-white"><Link href='#about'>ABOUT</Link></h4>
+                <h4 onClick={()=>{return showMenu()}} className=" hover:underline hover:text-white"><Link href='#skills'>SKILLS</Link></h4>
+                <h4 onClick={()=>{return showMenu()}} className=" hover:underline hover:text-white"><Link href='#projects'>PROJECTS</Link></h4>
+                <h4 onClick={()=>{return showMenu()}} className=" hover:underline hover:text-white"><Link href='#contact'>CONTACT</Link></h4>
                 
             </div>
 
 
         </div>
         <div className='bg-white fixed z-10 top-0 inset-x-0 h-16 w-svw p-16 border-b text-center flex justify-between'>
-            <a  className='md:text-xl font-semibold absolute top-16 left-11 '>{ "{ Full Stack Developer }" }</a>
+            <a  className='hidden md:block md:text-xl font-semibold absolute top-16 left-11 '>{ "{ Full Stack Developer }" }</a>
+            <a  className='block md:hidden md:text-xl font-semibold absolute top-16 left-11 w-20'>Full Stack Developer</a>
             <div>
-            <a ref={softwareE} className='hidden md:block text-xl font-semibold absolute left-[-15px] top-16 w-full text-center'>RUTWIK KASHID</a>
+            <a ref={softwareE} className=' text-xl font-semibold absolute left-[-15px] top-16 w-full text-center'>RUTWIK KASHID</a>
 
             </div>
             <div onClick={()=>{return showMenu()}} className='hidden md:block cursor-pointer absolute top-10 right-16 '>

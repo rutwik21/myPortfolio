@@ -21,23 +21,22 @@ function Footer() {
     //     })
     // })
   return (
-    <div>
-        <div className='w-[100%] bg-black text-white text-center p-3 '>
-            <div className="flex">
+        <div className='w-[100%] bg-black text-white text-center p-3 overflow-x-hidden'>
+            <div className="md:flex block mx-5 md:mx-0">
                 <div >
-                    <img className='rounded-3xl mx-10 my-4 min-w-96 max-w-96' src="/profile.png" alt='profile' />
+                    <img className='rounded-xl md:rounded-3xl md:mx-10 my-4 w-[85vw] md:w-[25vw]' src="/profile.png" alt='profile' />
                 </div>
 
-                <div className='my-4'>
-                    <h1 className='text-[9vw]  font-thin leading-none text-gray-300 text-start'>
+                <div className='md:my-4 '>
+                    <h1 className='text-[12vw] md:text-[9vw]  font-thin leading-none text-gray-300 text-start'>
                         LETS <br /> CONNECT
                     </h1>
-                    <div className="flex">
-                        <a href='https://www.linkedin.com/in/rut-wik' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Linkedin</a>
-                        <a href='https://github.com/rutwik21' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Github</a>
-                        <a href='https://www.instagram.com/rut_wik' target='_' className=' hover:text-gray-400 p-2 text-4xl cursor-pointer text-thin'>Instagram</a>
-                    </div>
                     <div className="flex gap-3">
+                        <a href='https://www.linkedin.com/in/rut-wik' target='_' className=' hover:text-gray-400 py-2  text-[4vw] md:text-[1.8vw] cursor-pointer text-thin'>Linkedin</a>
+                        <a href='https://github.com/rutwik21' target='_' className=' hover:text-gray-400 py-2  text-[4vw] md:text-[1.8vw] cursor-pointer text-thin'>Github</a>
+                        <a href='https://www.instagram.com/rut_wik' target='_' className=' hover:text-gray-400 py-2  text-[4vw] md:text-[1.8vw] cursor-pointer text-thin'>Instagram</a>
+                    </div>
+                    <div className="md:flex md:gap-3 text-start md:text-center my-4 md:my-0">
                         <p className='text-gray-400 text-thin'>Email:  <a href='mailto:rutwikkashid000@gmail.com'>rutwikkashid000@gmail.com</a></p>
                         <p className='text-gray-400 text-thin'>Phone: +91 8149150448</p>
 
@@ -45,7 +44,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="px-8 flex justify-between">
+            <div className="md:px-8 px-4 flex justify-between">
                 <p className=' text-gray-400 text-thin'>@Rutwik Kashid</p>
                 <div className='text-end'>
                     <p className=' text-gray-400 text-thin'>Designed by me</p>
@@ -55,8 +54,6 @@ function Footer() {
             </div>
 
         </div>
-        
-    </div>
   )
 }
 

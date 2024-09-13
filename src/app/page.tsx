@@ -57,9 +57,15 @@ export default function Home() {
         <Header />
         <Hero />
         <CollabText />
-        <Skills />
-        <Projects />
-        <Footer />
+        <div id="skills">
+          <Skills />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="contact">
+          <Footer />
+        </div>
         
       </div>
     </main>
