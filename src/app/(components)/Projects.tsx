@@ -24,24 +24,12 @@ useGSAP(()=>{
             scrub: 1.5,
         }
     });
-    tl.to(text.current, {
-        height: '60vh'
-    },'a')
-
-    tl.to(work.current, {
-        height: '60vh'
-    },'a')
-    tl.to(my.current, {
-        left: 0,
-    },'a')
-
-    tl.to(project.current, {
-        right: 0,
-    },'a')
-    tl.to(imgs.current, {
-        marginTop: "-50%"
-    })
-    mm.add("(max-width:640px)",()=>{
+    
+    mm.add({
+        isMobile: "(max-width: 640px)",
+        isTablet: "(min-width: 641px) and (max-width: 1024px)",
+        isDesktop: "(min-width: 1025px)"
+    },(context)=>{
         // const tl = gsap.timeline({
         //     scrollTrigger: {
         //         trigger: projects.current,
@@ -52,24 +40,48 @@ useGSAP(()=>{
         //         markers: true
         //     }
         // });
+        if(!context.conditions){return}
+        let { isMobile, isTablet, isDesktop } = context.conditions;
+
+        if(isDesktop || isTablet){
+            tl.to(text.current, {
+                height: '60vh'
+            },'a')
+
+            tl.to(work.current, {
+                height: '60vh'
+            },'a')
+            tl.to(my.current, {
+                left: 0,
+            },'a')
+
+            tl.to(project.current, {
+                right: 0,
+            },'a')
+            tl.to(imgs.current, {
+                marginTop: "-50%"
+            })
+        }
+        if(isMobile){
+            tl.to(text.current, {
+                height: '20vh'
+            },'a')
+        
+            tl.to(work.current, {
+                height: '20vh'
+            },'a')
+            tl.to(my.current, {
+                left: 0,
+            },'a')
+        
+            tl.to(project.current, {
+                right: 0,
+            },'a')
+            tl.to(imgs.current, {
+                marginTop: "-50%"
+            })
+        }
     
-        tl.to(text.current, {
-            height: '60vh'
-        },'a')
-    
-        tl.to(work.current, {
-            height: '60vh'
-        },'a')
-        tl.to(my.current, {
-            left: 0,
-        },'a')
-    
-        tl.to(project.current, {
-            right: 0,
-        },'a')
-        tl.to(imgs.current, {
-            marginTop: "-50%"
-        })
     });
     
 
@@ -89,14 +101,14 @@ useGSAP(()=>{
     <div ref={projects} className="flex items-center justify-center w-full h-[100svh] bg-black">
 
         {/* TEXT OVERLAY — ignore mouse events */}
-        <div ref={text} className="absolute w-[60vw] h-0 z-[9] pointer-events-none">
-            <h1 ref={my} className="absolute top-0 left-[12%] md:left-[33%] translate-y-[-50%] text-white text-[8vw] md:text-[4vw]">My</h1>
-            <h1 ref={project} className="absolute bottom-0 right-[10%] md:right-[30%] translate-y-[50%] text-white text-[8vw] md:text-[4vw]">Projects</h1>
+        <div ref={text} className="absolute w-[95vw] md:w-[60vw] h-0 z-[9] pointer-events-none">
+            <h1 ref={my} className="absolute top-0 left-[27%] md:left-[33%] translate-y-[-50%] text-white text-[8vw] md:text-[4vw]">My</h1>
+            <h1 ref={project} className="absolute bottom-0 right-[24%] md:right-[30%] translate-y-[50%] text-white text-[8vw] md:text-[4vw]">Projects</h1>
         </div>
 
         {/* IMAGE SECTION */}
-        <div ref={work} className="overflow-hidden flex items-center justify-center w-[60vw] h-0 bg-white">
-            <div className="w-full h-[60vh] bg-black overflow-hidden">
+        <div ref={work} className="overflow-hidden flex items-center justify-center w-[95vw] md:w-[60vw] h-0 bg-white">
+            <div className="w-full h-[20vh] md:h-[60vh] bg-black overflow-hidden">
                 <div ref={imgs} className="w-full mt-0">
 
                     {/* PROJECT ITEM */}

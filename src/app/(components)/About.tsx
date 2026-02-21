@@ -58,7 +58,7 @@ function About() {
             <div ref={aboutMe} className='text-gray-500 text-xl opacity-0 md:text-[2vw] text-center '>
                 About me
             </div>
-            <div className='text-[4vw] md:text-[1.8vw] font-thin md:m-24 m-6 text-center px-52'>
+            <div className='text-[4vw] md:text-[1.8vw] font-thin md:m-24 m-6 text-center md:px-52'>
                 {/* <img  className='rounded-xl md:rounded-3xl md:mx-10 my-4 w-[85vw] md:w-[25vw]' src='/profile.png' alt='Image'/> */}
                 <p ref={about} className='opacity-0'>
                     I’m a Software Engineer with 2.5+ years of experience building and maintaining reliable, production-ready applications in a product-based environment. I currently manage two live systems end-to-end, working across development, deployment, debugging, and continuous improvements, which has strengthened my focus on scalability, stability, and real user impact.
