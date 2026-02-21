@@ -81,7 +81,7 @@ function CollabText() {
                     <br />
                     <h1 className='font-semibold text-[6vw] md:text-[3vw]' >I value open communication and teamwork,</h1> 
                     <br />
-                    <h1 className='font-semibold text-[6vw] md:text-[3vw]' >working closely with clients and stakeholders to</h1> 
+                    <h1 className='font-semibold text-[6vw] md:text-[3vw]' >working closely with stakeholders to</h1> 
                     <br />
                     <h1 className='font-semibold text-[6vw] md:text-[3vw]' >turn visions into reality.</h1> 
                     <br />
@@ -92,7 +92,7 @@ function CollabText() {
                     <br />
                     <h1 ref={text2} className='w-0 md:text-nowrap overflow-hidden font-semibold text-[6vw] md:text-[3vw]' >I value open communication and teamwork,</h1> 
                     <br />
-                    <h1 ref={text3} className='w-0 md:text-nowrap overflow-hidden font-semibold text-[6vw] md:text-[3vw]' >working closely with clients and stakeholders to</h1> 
+                    <h1 ref={text3} className='w-0 md:text-nowrap overflow-hidden font-semibold text-[6vw] md:text-[3vw]' >working closely with stakeholders to</h1> 
                     <br />
                     <h1 ref={text4} className='w-0 md:text-nowrap overflow-hidden font-semibold text-[6vw] md:text-[3vw]' >turn visions into reality.</h1> 
                     <br />
