@@ -37,9 +37,9 @@ function Header() {
       {/* Fullscreen Overlay Menu */}
       <div
         ref={menu}
-        className="fixed top-0 left-0 w-full h-screen z-50 translate-y-[-100%] bg-neutral-950/95 backdrop-blur-2xl text-white flex flex-col justify-between p-8 md:p-16"
+        className="fixed top-0 left-0 w-full h-screen z-50 translate-y-[-100%] bg-neutral-950/95 backdrop-blur-2xl text-white flex flex-col justify-between p-6 md:p-12 overflow-y-auto"
       >
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full shrink-0">
           <div className="flex items-center gap-2 font-mono text-sm text-neutral-400">
             <Code2 className="w-4 h-4 text-sky-400" />
             <span>rutwik.kashid // navigation</span>
@@ -55,7 +55,7 @@ function Header() {
 
         <div
           ref={menuElements}
-          className="flex flex-col items-end space-y-6 text-right my-auto"
+          className="flex flex-col items-end space-y-3 sm:space-y-4 md:space-y-5 text-right my-auto py-6"
         >
           {[
             { label: 'HOME', href: '#hero' },
@@ -69,7 +69,7 @@ function Header() {
             <h4
               key={item.label}
               onClick={showMenu}
-              className="text-4xl md:text-7xl font-bold tracking-tight text-neutral-500 hover:text-white hover:translate-x-[-10px] transition-all cursor-pointer"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-500 hover:text-white hover:translate-x-[-8px] transition-all cursor-pointer"
             >
               <Link href={item.href}>{item.label}</Link>
             </h4>
@@ -78,14 +78,14 @@ function Header() {
             href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-neutral-200 text-neutral-900 text-base font-semibold transition-all mt-4"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-neutral-900 text-sm md:text-base font-semibold transition-all mt-2"
           >
             <span>VIEW RESUME</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-neutral-500 border-t border-white/10 pt-6 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-neutral-500 border-t border-white/10 pt-4 gap-3 shrink-0">
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4 text-emerald-400" />
             <span>Pune, India • Open to Opportunities</span>

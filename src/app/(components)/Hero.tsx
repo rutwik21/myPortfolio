@@ -12,14 +12,6 @@ const RESUME_URL = "https://drive.google.com/file/d/1qjIFTZOujKh880hMby5Rk2ooE11
 function Hero() {
   const pinDiv = useRef(null)
 
-  useGSAP(() => {
-    gsap.to(pinDiv.current, {
-      position: 'sticky',
-      start: 'top bottom',
-      end: 'center bottom',
-    })
-  })
-
   return (
     <section
       ref={pinDiv}

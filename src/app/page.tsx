@@ -20,16 +20,16 @@ export default function Home() {
   const container = useRef(null);
   const container1 = useRef(null);
   const container2 = useRef(null);
-  const [showIntro, setShowIntro] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      return !sessionStorage.getItem('hasSeenIntro');
-    }
-    return true;
-  });
+  const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      sessionStorage.setItem('hasSeenIntro', 'true');
+      const hasSeen = sessionStorage.getItem('hasSeenIntro');
+      if (hasSeen === 'true') {
+        setShowIntro(false);
+      } else {
+        sessionStorage.setItem('hasSeenIntro', 'true');
+      }
     }
   }, []);
 
