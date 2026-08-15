@@ -1,4 +1,5 @@
-import { ArrowUpRight, Globe, ShoppingBag, Sofa, Truck } from "lucide-react";
+import { ArrowUpRight, Globe, ShoppingBag, Sofa, Truck, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -35,7 +36,17 @@ const stack = [
 function Furnfeet() {
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 pb-20 pt-24 md:px-10">
+      <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pb-20 pt-16 md:px-10">
+        <div>
+          <Link
+            href="/#projects"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300 hover:text-white hover:border-zinc-700 transition-all mb-4"
+          >
+            <ArrowLeft size={14} className="text-sky-400" />
+            <span>Back to Portfolio</span>
+          </Link>
+        </div>
+
         <p className="text-sm uppercase tracking-[0.22em] text-zinc-400">
           Project Showcase
         </p>
@@ -75,9 +86,9 @@ function Furnfeet() {
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-18 md:px-10">
         <div className="w-full max-w-5xl mx-auto pb-20">
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-black aspect-video">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-black aspect-video">
             <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/-xIYyL_F29Q" title="Furnfeet - A Modern Furniture & Furnishing E-commerce Platform" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -121,18 +132,18 @@ function Furnfeet() {
             Overview
           </h4>
 
-          Furnfeet is a full-stack e-commerce platform designed to modernize how customers discover, customize, and purchase furniture online. The platform focuses on flexibility, performance, and real-world usability — enabling customers not only to browse products, but also to tailor furniture according to their exact needs.<br/><br/>
+          Furnfeet is a full-stack e-commerce platform designed to modernize how customers discover, customize, and purchase furniture online. The platform focuses on flexibility, performance, and real-world usability — enabling customers not only to browse products, but also to tailor furniture according to their exact needs.<br /><br />
           Built with scalability and production reliability in mind, Furnfeet combines a performant frontend architecture with a flexible headless CMS and a robust backend ecosystem to deliver a smooth and secure shopping experience.
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             The Problem
           </h4>
 
-          Traditional furniture e-commerce platforms often limit customers to fixed product configurations. This makes it difficult for buyers, architects, and interior designers to source furniture that precisely fits their design requirements, space constraints, or aesthetic preferences.<br/><br/>
+          Traditional furniture e-commerce platforms often limit customers to fixed product configurations. This makes it difficult for buyers, architects, and interior designers to source furniture that precisely fits their design requirements, space constraints, or aesthetic preferences.<br /><br />
 
-          Additionally, the furniture ecosystem involves multiple stakeholders such as designers, architects, and craftsmen, yet most platforms do not support role-specific incentives or workflows.<br/><br/>
+          Additionally, the furniture ecosystem involves multiple stakeholders such as designers, architects, and craftsmen, yet most platforms do not support role-specific incentives or workflows.<br /><br />
 
-          Furnfeet was created to solve these limitations by introducing customizable furniture ordering along with a multi-role referral reward system.<br/><br/>
+          Furnfeet was created to solve these limitations by introducing customizable furniture ordering along with a multi-role referral reward system.<br /><br />
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             The Solution
@@ -151,7 +162,7 @@ function Furnfeet() {
             <li>Secure payments with seamless checkout</li>
             <li>Optimized performance with server-side rendering</li>
           </ul>
-          
+
           The result is a scalable, production-ready system capable of supporting both direct consumers and professional collaborators.
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
@@ -159,7 +170,7 @@ function Furnfeet() {
           </h4>
           Custom Furniture Ordering
 
-          Customers can purchase furniture tailored to their exact requirements, ensuring better usability and personalization compared to traditional catalog-only systems.<br/><br/>
+          Customers can purchase furniture tailored to their exact requirements, ensuring better usability and personalization compared to traditional catalog-only systems.<br /><br />
 
           Multi-Role Referral Rewards
 
@@ -200,7 +211,7 @@ function Furnfeet() {
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">
             Responsive and Production-Ready UI
           </h4>
-          
+
           The frontend is fully responsive and built with reusable React components, ensuring maintainability and consistency across the application.
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
@@ -214,35 +225,35 @@ function Furnfeet() {
             <li>Next.js (Server-Side Rendering for performance and SEO)</li>
             <li>React (Component-driven architecture)</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Backend & CMS</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>Payload CMS (Headless CMS for flexible content and admin workflows)</li>
             <li>Node.js ecosystem</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Database</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>MongoDB (Scalable and document-oriented storage)</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Payments</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>Razorpay (Secure and seamless payment processing)</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Deployment & Hosting</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>Hosted on a Virtual Machine using Coolify</li>
             <li>Production environment configured for stability and scalability</li>
           </ul>
-          
+
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             Engineering Highlights
           </h4>
 
           While building Furnfeet, special focus was placed on:
-           
+
           <ul className="list-disc pl-4 mb-2">
             <li>Creating a scalable authentication architecture supporting multiple user roles</li>
             <li>Designing reusable UI components for long-term maintainability</li>
@@ -250,10 +261,10 @@ function Furnfeet() {
             <li>Ensuring SSR-based rendering for faster page loads and SEO improvements</li>
             <li>Structuring the system to support future marketplace expansion</li>
           </ul>
-          
+
 
           The project reflects a real-world production mindset: build responsibly, think in systems, and optimize for both user experience and operational stability.
-          
+
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             Live Demo
           </h4>
@@ -265,9 +276,9 @@ function Furnfeet() {
             Final Thoughts
           </h4>
 
-          Furnfeet represents more than just an e-commerce application — it demonstrates the ability to design and build a scalable production system that handles authentication, payments, customization workflows, and multi-role business logic within a single cohesive architecture.<br/><br/>
+          Furnfeet represents more than just an e-commerce application — it demonstrates the ability to design and build a scalable production system that handles authentication, payments, customization workflows, and multi-role business logic within a single cohesive architecture.<br /><br />
 
-          The project showcases full-stack ownership from development to deployment, reflecting practical experience in building reliable, user-focused production applications.<br/><br/>
+          The project showcases full-stack ownership from development to deployment, reflecting practical experience in building reliable, user-focused production applications.<br /><br />
 
           Feedback and suggestions are always welcome.
         </div>

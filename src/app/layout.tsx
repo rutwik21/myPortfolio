@@ -12,8 +12,8 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: "Rutwik Kashid",
-  description: "Portfolio",
+  title: "Rutwik Kashid | Software Engineer · 3+ YOE · Full-Stack & Cloud",
+  description: "Software Engineer with 3+ years of product company experience. Node.js, React, Next.js, TypeScript, AWS, Docker, System Design. Building scalable full-stack applications and cloud infrastructure.",
 };
 
 export default function RootLayout({

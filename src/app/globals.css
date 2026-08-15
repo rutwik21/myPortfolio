@@ -104,3 +104,67 @@ html::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
+
+@keyframes bubbleFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-14px) translateX(8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px) rotate(-1deg);
+  }
+}
+
+@keyframes bubbleFloatMedium {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  40% {
+    transform: translateY(-18px) translateX(-12px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translateY(12px) translateX(10px) rotate(1deg);
+  }
+}
+
+@keyframes bubbleFloatFast {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) translateX(14px) rotate(2deg);
+  }
+}
+
+.animate-bubble-slow {
+  animation: bubbleFloatSlow 8s ease-in-out infinite;
+}
+
+.animate-bubble-medium {
+  animation: bubbleFloatMedium 6.5s ease-in-out infinite;
+}
+
+.animate-bubble-fast {
+  animation: bubbleFloatFast 5s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

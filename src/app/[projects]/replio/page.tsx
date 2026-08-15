@@ -1,4 +1,5 @@
-import { ArrowUpRight, Globe, MessageSquare, SlidersHorizontal, MousePointerClick  } from "lucide-react";
+import { ArrowUpRight, Globe, MessageSquare, SlidersHorizontal, MousePointerClick, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -34,7 +35,17 @@ const stack = [
 function Replio() {
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
-      <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 pb-20 pt-24 md:px-10">
+      <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pb-20 pt-16 md:px-10">
+        <div>
+          <Link
+            href="/#projects"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300 hover:text-white hover:border-zinc-700 transition-all mb-4"
+          >
+            <ArrowLeft size={14} className="text-sky-400" />
+            <span>Back to Portfolio</span>
+          </Link>
+        </div>
+
         <p className="text-sm uppercase tracking-[0.22em] text-zinc-400">
           Project Showcase
         </p>
@@ -72,9 +83,9 @@ function Replio() {
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-18 md:px-10">
         <div className="w-full max-w-5xl mx-auto pb-20">
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-black aspect-video">
+          <div className="relative w-full overflow-hidden rounded-2xl shadow-xl bg-black aspect-video">
             <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/42YAn-kZPcw" title="Replio - AI Powered Linkedin Engagement" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </div>
+          </div>
         </div>
       </section>
 
@@ -118,15 +129,15 @@ function Replio() {
             Overview
           </h4>
 
-          Replio is an AI-powered Chrome extension designed to make professional engagement on LinkedIn faster, smarter, and more personalized. Instead of spending time thinking about what to comment on posts, users can generate contextual, high-quality responses instantly with a single click.<br/><br/>
-          The extension integrates directly into the LinkedIn interface and provides intelligent comment suggestions tailored to the content of each post, while allowing users to control tone, style, and intent through customizable prompts.<br/><br/>
+          Replio is an AI-powered Chrome extension designed to make professional engagement on LinkedIn faster, smarter, and more personalized. Instead of spending time thinking about what to comment on posts, users can generate contextual, high-quality responses instantly with a single click.<br /><br />
+          The extension integrates directly into the LinkedIn interface and provides intelligent comment suggestions tailored to the content of each post, while allowing users to control tone, style, and intent through customizable prompts.<br /><br />
           Replio represents my first hands-on AI-driven production project, combining real-world browser extension architecture with modern AI tooling and scalable backend services.
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             The Problem
           </h4>
 
-          Professional engagement on LinkedIn is valuable but time-consuming. Writing thoughtful comments consistently requires:<br/><br/>
+          Professional engagement on LinkedIn is valuable but time-consuming. Writing thoughtful comments consistently requires:<br /><br />
 
           <ul className="list-disc pl-4 mb-2">
             <li>Reading the post carefully</li>
@@ -135,23 +146,23 @@ function Replio() {
             <li>Secure payments with seamless checkout</li>
             <li>Avoiding repetitive or generic replies</li>
           </ul>
-          For users who actively network or build their presence, this process quickly becomes a bottleneck.<br/><br/>
+          For users who actively network or build their presence, this process quickly becomes a bottleneck.<br /><br />
 
-          Replio was created to remove this friction by generating contextual, personalized comments automatically while still giving users control over how they want to communicate.<br/><br/>
+          Replio was created to remove this friction by generating contextual, personalized comments automatically while still giving users control over how they want to communicate.<br /><br />
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             The Solution
           </h4>
 
-          Replio embeds directly into LinkedIn’s post interface and adds a small action icon beneath each post.<br/><br/>
+          Replio embeds directly into LinkedIn’s post interface and adds a small action icon beneath each post.<br /><br />
           With one click, the extension analyzes the post context and generates an AI-powered comment suggestion within seconds. Users can also define their own prompt templates to control:
           <ul className="list-disc pl-4 mb-2">
             <li>Tone (professional, friendly, analytical, supportive, etc.)</li>
             <li>Writing style</li>
             <li>Comment intent (appreciation, discussion, question, insight)</li>
           </ul>
-          
-          Multiple prompts can be saved for different engagement scenarios, allowing users to switch instantly depending on the situation.<br/><br/>
+
+          Multiple prompts can be saved for different engagement scenarios, allowing users to switch instantly depending on the situation.<br /><br />
           This turns LinkedIn engagement into a fast, structured, and repeatable workflow.
 
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
@@ -159,7 +170,7 @@ function Replio() {
           </h4>
           Context-Aware Comment Generation
 
-          Replio reads the visible LinkedIn post content and generates a relevant, meaningful response instead of generic AI text.<br/><br/>
+          Replio reads the visible LinkedIn post content and generates a relevant, meaningful response instead of generic AI text.<br /><br />
 
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">
             One-Click Smart Commenting
@@ -171,7 +182,7 @@ function Replio() {
             Custom Prompt System
           </h4>
 
-            Users can create their own prompts to control:
+          Users can create their own prompts to control:
 
           <ul className="list-disc pl-4 mb-2">
             <li>Tone of voice</li>
@@ -199,7 +210,7 @@ function Replio() {
           </h4>
 
           The extension works directly inside the LinkedIn UI, making the workflow natural and frictionless without requiring users to switch platforms.
-          
+
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             Technology Stack
           </h4>
@@ -210,30 +221,30 @@ function Replio() {
           <ul className="list-disc pl-4 mb-2">
             <li>React (component-based interface for extension popup and controls)</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Backend & CMS</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>Node.js backend for request processing and logic</li>
             <li>Vercel AI SDK v5 (AI orchestration and response handling)</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Database</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>MongoDB for storing user prompts and configuration</li>
           </ul>
-          
+
           <h4 className="text-xl font-semibold leading-tight sm:text-md md:text-lg my-2">Payments</h4>
           <ul className="list-disc pl-4 mb-2">
             <li>Razorpay integration for handling subscription or payment workflows</li>
           </ul>
-          
-          
+
+
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             Engineering Highlights
           </h4>
 
           While building Replio, the focus was on creating a real-world usable AI tool rather than a demo. Key engineering considerations included:
-           
+
           <ul className="list-disc pl-4 mb-2">
             <li>Injecting UI elements safely into a third-party website (LinkedIn DOM manipulation)</li>
             <li>Designing a prompt management system that supports multiple reusable templates</li>
@@ -241,14 +252,14 @@ function Replio() {
             <li>Structuring the backend for scalable prompt storage and request handling</li>
             <li>Creating a lightweight extension architecture to maintain fast performance</li>
           </ul>
-          
+
 
           This project marked an important step into applied AI development, demonstrating how AI can be integrated into everyday professional workflows to improve productivity.
-          
+
           <h4 className="text-2xl font-semibold leading-tight sm:text-2xl md:text-3xl my-8">
             Use Cases
           </h4>
-            Replio is especially useful for:
+          Replio is especially useful for:
           <ul className="list-disc pl-4 mb-2">
             <li>Professionals building their LinkedIn presence</li>
             <li>Recruiters engaging with industry posts</li>
@@ -268,9 +279,9 @@ function Replio() {
             Final Thoughts
           </h4>
 
-          Replio represents my first production-ready AI-driven product and an exploration into building intelligent workflow automation tools.<br/><br/>
+          Replio represents my first production-ready AI-driven product and an exploration into building intelligent workflow automation tools.<br /><br />
 
-          The project demonstrates not only frontend and backend engineering skills, but also the ability to integrate AI meaningfully into real user scenarios — focusing on usability, personalization, and performance.<br/><br/>
+          The project demonstrates not only frontend and backend engineering skills, but also the ability to integrate AI meaningfully into real user scenarios — focusing on usability, personalization, and performance.<br /><br />
 
           This is just the beginning of deeper work in AI-powered developer tools and productivity platforms, and feedback is always welcome for future improvements.
         </div>
